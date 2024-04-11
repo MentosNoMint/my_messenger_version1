@@ -16,7 +16,12 @@ app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
 
+
 const supabaseClient = supabase.createClient(supabaseUrl, supabaseKey);
+
+app.get('/test', async (req, res) => {
+    res.send('test')
+})
 
 app.post('/register', async (req, res) => {
 
